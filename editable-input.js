@@ -295,5 +295,14 @@
 		}
 	});
 
+	EditableInput.registerType('html', {
+		get: function(element) {
+			return element.innerHTML;
+		},
+		set: function(element, val) {
+			element.innerHTML = val;
+		}
+	});
+
 	window.EditableInput = EditableInput;
 } (window, window.jQuery))
